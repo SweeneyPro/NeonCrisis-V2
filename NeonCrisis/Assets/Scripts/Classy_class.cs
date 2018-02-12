@@ -19,7 +19,7 @@ public class Classy_class : MonoBehaviour {
 		cooldown += Time.deltaTime;
 
 		if (cooldown > 1) {
-			Instantiate (pew, transform.position, Quaternion.identity);
+			Instantiate (pew, transform.position, this.transform.rotation);
 			cooldown = 0;
 
 		}

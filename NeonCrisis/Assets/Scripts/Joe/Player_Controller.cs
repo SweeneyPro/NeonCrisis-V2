@@ -44,6 +44,7 @@ public class Player_Controller : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+		print ("hit");
         Weapon_Pickup pickup = collision.GetComponent<Weapon_Pickup>();
         if(pickup != null)
         {
