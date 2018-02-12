@@ -88,5 +88,9 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD:NeonCrisis/Assets/Player/Tint.mat
     - _MKGlowTexColor: {r: 0.5, g: 0.5, b: 1, a: 0}
+=======
+    - _MKGlowTexColor: {r: 0.83434254, g: 0.66565746, b: 0.83434254, a: 0}
+>>>>>>> 041ee9cfcd3e3fd928be19aa4c1c78f95e51e7d7:NeonCrisis/Assets/Art/Player/Tint.mat
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

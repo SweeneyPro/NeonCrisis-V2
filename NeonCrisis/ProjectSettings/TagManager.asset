@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Pew
+  - Weapon_Pickup
   layers:
   - Default
   - TransparentFX
