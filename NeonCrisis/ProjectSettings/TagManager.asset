@@ -20,7 +20,7 @@ TagManager:
   - Enemy
   - Enemy_Bullet
   - Player_Bullet
-  - 
+  - Bullet_Blocker
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 331805957
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

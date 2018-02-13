@@ -16,7 +16,11 @@ public class enemy_destroy : MonoBehaviour {
 
 		if (col.gameObject.tag == "Pew") {
 
+<<<<<<< HEAD
 			Instantiate (Resources.Load ("Explosion_1"), transform.position, Quaternion.identity);
+=======
+			GameObject Explosion = Instantiate (Resources.Load ("Explosion_1"), this.transform.position, Quaternion.identity)  as GameObject;
+>>>>>>> 3e2f7723403276515bd1c3a30a470113397a44e7
 
 			Destroy(gameObject);
 		}

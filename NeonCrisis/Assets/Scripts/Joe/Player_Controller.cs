@@ -24,8 +24,8 @@ public class Player_Controller : MonoBehaviour {
 
     void Handle_User_Input()
     {
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
+        float hor = Input.GetAxisRaw("Horizontal");
+        float ver = Input.GetAxisRaw("Vertical");
         Vector3 move = new Vector3(hor * move_speed, ver * move_speed, 0);
         rigidbody.velocity = move;
         if(Input.GetKey(KeyCode.Space))
@@ -45,7 +45,6 @@ public class Player_Controller : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-		print ("hit");
         Weapon_Pickup pickup = collision.GetComponent<Weapon_Pickup>();
         if(pickup != null)
         {
@@ -53,4 +52,13 @@ public class Player_Controller : MonoBehaviour {
             Destroy(pickup.gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Basic_Bullet>() != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    
 }
