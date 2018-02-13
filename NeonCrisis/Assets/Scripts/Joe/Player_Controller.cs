@@ -11,6 +11,7 @@ public class Player_Controller : MonoBehaviour {
     public float shot_delay;
     float next_shot_time;
 
+
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
