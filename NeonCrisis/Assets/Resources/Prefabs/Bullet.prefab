@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386270162273276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.46, z: 0}
+  m_LocalPosition: {x: -1.155736, y: -4.030102, z: 0}
   m_LocalScale: {x: 0.34999996, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.08
+  m_Radius: 0.26
 --- !u!95 &95625909187930976
 Animator:
   serializedVersion: 3
@@ -142,6 +142,12 @@ TrailRenderer:
         value: 0.20000076
         inSlope: 0
         outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 0
+        inSlope: -0.44962138
+        outSlope: -0.44962138
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
