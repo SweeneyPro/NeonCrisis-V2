@@ -4,23 +4,23 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.Animations;
 
-struct Enemy_Information_Section
+public struct Enemy_Information_Section
 {   
     public float move_speed, fire_rate, fire_speed, start_time;
     public int health;
     public AnimatorController animation_controller;
-    public Enemy_Generation_Utility.Fire_Pattern_Type fire_pattern_type;
+    public string fire_pattern_type;
+    public int choice_index;
 }
 
 public class Enemy_Generation_Utility : EditorWindow {
 
     Enemy_Information_Section[] enemy_sections;
-    public enum Fire_Pattern_Type { forward, circle, loop, homing };
-
+    string[] fire_types = new[] { "straight", "circle", "loop", "homing" };
     public string enemy_name;
     public Sprite enemy_sprite;
     float collider_size;
-
+    int choice_index = 0;
     int amount_of_sections;
     Vector2 scroll_position;
 
@@ -32,10 +32,7 @@ public class Enemy_Generation_Utility : EditorWindow {
         Display_Options();
         if(GUILayout.Button("Generate Enemy"))
         {
-            for (int i = 0; i < enemy_sections.Length; i++)
-            {
-                Enemy_Generation.Generate_Enemy(enemy_name, enemy_sprite, enemy_sections[i].animation_controller, enemy_sections[i].fire_pattern_type, enemy_sections[i].fire_speed, collider_size, enemy_sections[i].move_speed);
-            }
+            Enemy_Generation.Generate_Enemy(enemy_name, enemy_sprite, collider_size, enemy_sections);
         }
         GUILayout.EndScrollView();
         GUILayout.EndVertical();
@@ -71,7 +68,8 @@ public class Enemy_Generation_Utility : EditorWindow {
                 enemy_sections[i].fire_speed = EditorGUILayout.FloatField("Fire Speed", enemy_sections[i].fire_speed);
                 enemy_sections[i].animation_controller = (AnimatorController)EditorGUILayout.ObjectField("Enemy Animation Controller", enemy_sections[i].animation_controller, typeof(AnimatorController), allowSceneObjects: false);
                 enemy_sections[i].health = EditorGUILayout.IntField("Health", enemy_sections[i].health);
-                enemy_sections[i].fire_pattern_type = (Fire_Pattern_Type)EditorGUILayout.EnumPopup("Fire Pattern Type", enemy_sections[i].fire_pattern_type);
+                enemy_sections[i].choice_index = EditorGUILayout.Popup(enemy_sections[i].choice_index, fire_types);
+                enemy_sections[i].fire_pattern_type = fire_types[choice_index];
                 EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
             }
         }

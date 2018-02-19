@@ -4,18 +4,13 @@ using UnityEngine;
 using UnityEditor.Animations;
 public class Enemy_base : MonoBehaviour {
 
-    
-
-    public enum Fire_Pattern_Type { forward, circle, loop, homing };
-
     public struct Enemy_Information_Instance
     {
         public float move_speed, fire_rate, fire_speed, start_time;
         public int health;
         public AnimatorController animation_controller;
-
-        public Fire_Pattern_Type fire_pattern_type;
-    
+        public string fire_pattern_type;
+        
     }
 
     public string enemy_name;
@@ -26,7 +21,7 @@ public class Enemy_base : MonoBehaviour {
     public int health;
     public AnimatorController animation_controller;
 
-    public Fire_Pattern_Type fire_pattern_type;
+    public string fire_pattern_type;
     List<float> times = new List<float>();
     int curent_time_index = 0; // dont need to record index if we removing elements anyway right?
 
@@ -79,7 +74,7 @@ public class Enemy_base : MonoBehaviour {
         collider_size = collidersize;
     }
 
-    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, int health, AnimatorController animationcontroller, Fire_Pattern_Type firepatterntype)
+    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, int health, AnimatorController animationcontroller, string _fire_pattern_type)
     {
         Enemy_Information_Instance behaviour_set_instance;
         behaviour_set_instance.move_speed = movespeed;
@@ -88,7 +83,7 @@ public class Enemy_base : MonoBehaviour {
         behaviour_set_instance.start_time = starttime;
         behaviour_set_instance.health = health;
         behaviour_set_instance.animation_controller = animationcontroller;
-        behaviour_set_instance.fire_pattern_type = firepatterntype;
+        behaviour_set_instance.fire_pattern_type = _fire_pattern_type;
 
         BehaviourSets.Add(behaviour_set_instance);
     }

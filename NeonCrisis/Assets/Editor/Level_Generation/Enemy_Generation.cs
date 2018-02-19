@@ -6,7 +6,7 @@ using UnityEditor.Animations;
 
 public class Enemy_Generation : MonoBehaviour{
 
-    public static void Generate_Enemy(string _name, Sprite _sprite, AnimatorController _controller, Enemy_Generation_Utility.Fire_Pattern_Type _fire_pattern_type, float _fire_speed, float _collider_radius, float _move_speed)
+    public static void Generate_Enemy(string _name, Sprite _sprite, float _collider_radius, Enemy_Information_Section[] _enemy_information)
     {
         
         GameObject enemy_object = new GameObject(_name);
@@ -14,27 +14,19 @@ public class Enemy_Generation : MonoBehaviour{
         SpriteRenderer sprite_renderer = enemy_object.AddComponent<SpriteRenderer>();
         sprite_renderer.sprite = _sprite;
         Animator animator = enemy_object.AddComponent<Animator>();
-        animator.runtimeAnimatorController = _controller;
         CircleCollider2D collider = enemy_object.AddComponent<CircleCollider2D>();
         collider.radius = _collider_radius;
         enemy_object.layer = LayerMask.NameToLayer("Enemy");
-        //set speed
-        //add fire pattern control //currenly doesn't do anything
-        switch(_fire_pattern_type)
+
+        Enemy_base enemy_base = enemy_object.AddComponent<Enemy_base>();
+        enemy_base.Enemy_Constructor(_name, _sprite, _collider_radius);
+        for(int i = 0; i < _enemy_information.Length; i++)
         {
-            case Enemy_Generation_Utility.Fire_Pattern_Type.forward:
-                //add forward shot script
-                break;
-            case Enemy_Generation_Utility.Fire_Pattern_Type.circle:
-                //add circle shot script
-                break;
-            case Enemy_Generation_Utility.Fire_Pattern_Type.loop:
-                //add loop shot script
-                break;
-            case Enemy_Generation_Utility.Fire_Pattern_Type.homing:
-                //add homing shot script
-                break;
+            enemy_base.EnemyBehaviourConstructor(_enemy_information[i].move_speed, _enemy_information[i].fire_rate, _enemy_information[i].fire_speed, _enemy_information[i].start_time, _enemy_information[i].health, _enemy_information[i].animation_controller, _enemy_information[i].fire_pattern_type);
         }
+
+
+
 
         PrefabUtility.CreatePrefab("Assets/Resources/Prefabs/Enemies/Individual/" + _name + ".prefab", enemy_object); //add checking to make sure it doesn't already exist
         DestroyImmediate(enemy_object);
