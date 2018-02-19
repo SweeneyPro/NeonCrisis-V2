@@ -7,6 +7,7 @@ public class Classy_class : MonoBehaviour {
 	public GameObject pew, explosion_object;
     public int range;
     public GameObject pickup;
+    
 
 	// Use this for initialization
 	void Start () {
