@@ -10,7 +10,7 @@ public class Classy_class : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Destroy(this.gameObject, 8);
+        //Destroy(this.gameObject, 8);
 	}
 	
 	// Update is called once per frame

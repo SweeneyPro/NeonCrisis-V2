@@ -11,10 +11,18 @@ public class Player_Controller : MonoBehaviour {
     public float shot_delay;
     float next_shot_time;
 
+	public int BulletPoolCount;
+	private List<GameObject> bullets = new List<GameObject> ();
+
 
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
+
+		for (int i = 0; i < BulletPoolCount; i++) {
+			bullets.Add (Instantiate (bullet_object, Vector3.one, Quaternion.identity));
+
+		}
 	}
 	
 	// Update is called once per frame
