@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class Distance_Between : MonoBehaviour {
 
-    [MenuItem("Tool/Measure Distance")]
+    [MenuItem("Tools/Measure Distance")]
 	public static void Measure_Distance()
     {
         GameObject[] objects = Selection.gameObjects;
