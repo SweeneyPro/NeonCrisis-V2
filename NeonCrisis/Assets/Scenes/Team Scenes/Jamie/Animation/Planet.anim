@@ -20,12 +20,12 @@ AnimationClip:
         time: 0
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 36, z: 0}
+        outSlope: {x: 0, y: 12, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 10
+        time: 30
         value: {x: 0, y: 360, z: -360}
-        inSlope: {x: 0, y: 36, z: 0}
+        inSlope: {x: 0, y: 12, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
@@ -36,7 +36,7 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
-  m_SampleRate: 60
+  m_SampleRate: 20
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -56,7 +56,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 10
+    m_StopTime: 30
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -82,7 +82,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 10
+        time: 30
         value: 0
         inSlope: 0
         outSlope: 0
@@ -101,12 +101,12 @@ AnimationClip:
         time: 0
         value: 0
         inSlope: 0
-        outSlope: 36
+        outSlope: 12
         tangentMode: 69
       - serializedVersion: 2
-        time: 10
+        time: 30
         value: 360
-        inSlope: 36
+        inSlope: 12
         outSlope: 0
         tangentMode: 69
       m_PreInfinity: 2
@@ -126,7 +126,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 10
+        time: 30
         value: -360
         inSlope: 0
         outSlope: 0
