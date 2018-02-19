@@ -12,14 +12,14 @@ public class Level_Generation_Utility : EditorWindow {
     float level_scroll_speed = 1.0f;
     float level_time = 0.0f;
     float last_level_time;
+    float time_offset;
 
     //enemy generation settings
     bool generating_enemy;
     string enemy_name;
     Sprite enemy_sprite;
     AnimatorController animation_controller;
-    public enum Fire_Pattern_Type { forward, circle, loop, homing };
-    public Fire_Pattern_Type fire_pattern_type;
+    
     float fire_speed, enemy_radius, move_speed;
 
     //wave generation settings
@@ -135,6 +135,7 @@ public class Level_Generation_Utility : EditorWindow {
     void Level_Speed()
     {
         level_scroll_speed = EditorGUILayout.FloatField("Level Scroll Speed", level_scroll_speed);
+        time_offset = EditorGUILayout.FloatField("Time Offset", time_offset);
     }
 
     void Time_Scrubber()
@@ -162,39 +163,17 @@ public class Level_Generation_Utility : EditorWindow {
 
     void Enemy_Section()
     {
-        generating_enemy = EditorGUILayout.Foldout(generating_enemy, "Enemy Generation");
-        if (generating_enemy)
+        if (GUILayout.Button("Generate Enemy"))
         {
-            enemy_name = EditorGUILayout.TextField("Enemy Name", enemy_name);
-            enemy_sprite = (Sprite)EditorGUILayout.ObjectField("Enemy Sprite", enemy_sprite, typeof(Sprite), allowSceneObjects: false);
-            animation_controller = (AnimatorController)EditorGUILayout.ObjectField("Animation Controller", animation_controller, typeof(AnimatorController), allowSceneObjects: false);
-            fire_pattern_type = (Fire_Pattern_Type)EditorGUILayout.EnumPopup("Fire Type", fire_pattern_type);
-            fire_speed = EditorGUILayout.FloatField("Fire Speed", fire_speed);
-            enemy_radius = EditorGUILayout.FloatField("Collider Radius", enemy_radius);
-            move_speed = EditorGUILayout.FloatField("Move Speed", move_speed);
-
-            if(GUILayout.Button("Clear Enemy Settings"))
-            {
-                enemy_name = "";
-                enemy_sprite = null;
-                animation_controller = null;
-                fire_pattern_type = Fire_Pattern_Type.forward;
-                //if this stuff needs to be calculated and set then remove this reset section (possibly hardcode)
-                fire_speed = 0;
-                enemy_radius = 0;
-                move_speed = 0;
-            }
-
-            if (GUILayout.Button("Generate Enemy"))
-            {
-                Enemy_Generation.Generate_Enemy(enemy_name, enemy_sprite, animation_controller, fire_pattern_type, fire_speed, enemy_radius, move_speed);
-            }
+            EditorWindow.GetWindow(typeof(Enemy_Generation_Utility));
+            //Enemy_Generation.Generate_Enemy(enemy_name, enemy_sprite, animation_controller, fire_pattern_type, fire_speed, enemy_radius, move_speed);
         }
+        
     }
 
     float Get_Scroll_Position()
     {
-        return level_time * level_scroll_speed;
+        return (level_time + time_offset) * level_scroll_speed;
     }
 
     //gets all textures in set folder, not currently in use
