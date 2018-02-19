@@ -8,6 +8,7 @@ public class Enemy_Generation : MonoBehaviour{
 
     public static void Generate_Enemy(string _name, Sprite _sprite, AnimatorController _controller, Enemy_Generation_Utility.Fire_Pattern_Type _fire_pattern_type, float _fire_speed, float _collider_radius, float _move_speed)
     {
+        
         GameObject enemy_object = new GameObject(_name);
         enemy_object.AddComponent<Rigidbody2D>();
         SpriteRenderer sprite_renderer = enemy_object.AddComponent<SpriteRenderer>();
