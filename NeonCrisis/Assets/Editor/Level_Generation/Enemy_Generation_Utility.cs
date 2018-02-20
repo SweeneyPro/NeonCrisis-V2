@@ -11,6 +11,8 @@ public struct Enemy_Information_Section
     public AnimatorController animation_controller;
     public string fire_pattern_type;
     public int choice_index;
+    public GameObject bullet_type; // Added by michael - check if right
+    public Base_Fire_Pattern fire_pattern; // Added by michael - check if right
 }
 
 public class Enemy_Generation_Utility : EditorWindow {
