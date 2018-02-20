@@ -22,7 +22,7 @@ public class Enemy_Generation : MonoBehaviour{
         enemy_base.Enemy_Constructor(_name, _sprite, _collider_radius);
         for(int i = 0; i < _enemy_information.Length; i++)
         {
-            enemy_base.EnemyBehaviourConstructor(_enemy_information[i].move_speed, _enemy_information[i].fire_rate, _enemy_information[i].fire_speed, _enemy_information[i].start_time, _enemy_information[i].health, _enemy_information[i].animation_controller, _enemy_information[i].fire_pattern_type);
+            enemy_base.EnemyBehaviourConstructor(_enemy_information[i].move_speed, _enemy_information[i].fire_rate, _enemy_information[i].fire_speed, _enemy_information[i].start_time, _enemy_information[i].health, _enemy_information[i].animation_controller, _enemy_information[i].fire_pattern_type, null /*fix when ready*/, null /*fix when ready*/);
         }
 
 
