@@ -8,6 +8,7 @@ public class TEST_Follow_Curve : MonoBehaviour {
     int curve_index = 0;
     BezierCurve current_curve;
     Vector3 end_point;
+    float time_offset;
 
 	// Use this for initialization
 	void Start () {
@@ -18,13 +19,14 @@ public class TEST_Follow_Curve : MonoBehaviour {
 	void FixedUpdate () {
 		if(current_curve != null)
         {
-            Vector3 target = current_curve.GetPointAt(Time.fixedTime * (speed * Time.deltaTime));
+            Vector3 target = current_curve.GetPointAt((Time.fixedTime - time_offset) * (speed * Time.deltaTime));
             this.transform.position = target;
             this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
             //this.transform.position = bezier_curve.GetPointAt(Time.fixedTime / (speed * Time.deltaTime));
             if(this.transform.position == end_point)
             {
                 curve_index++;
+                time_offset = -Time.fixedTime;
             }
         }
 	}
