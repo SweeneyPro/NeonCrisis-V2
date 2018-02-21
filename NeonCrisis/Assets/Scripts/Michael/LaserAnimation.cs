@@ -14,7 +14,7 @@ public class LaserAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        /*
         if(Input.GetKeyDown("p"))
         {
             anim.SetBool("Active", true);
@@ -27,6 +27,6 @@ public class LaserAnimation : MonoBehaviour {
             anim.speed = 1;
             Debug.Log("Deactive");
         }
-		
+		*/
 	}
 }
