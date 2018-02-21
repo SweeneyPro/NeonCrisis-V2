@@ -8,7 +8,7 @@ public class Enemy_base : MonoBehaviour {
     {
         public float move_speed, fire_rate, fire_speed, start_time;
         public int health;
-        public AnimatorController animation_controller;
+        public GameObject movement_curve;
         public string fire_pattern_type;
         
     }
@@ -19,7 +19,7 @@ public class Enemy_base : MonoBehaviour {
 
     public float move_speed, fire_rate, fire_speed, start_time;
     public int health;
-    public AnimatorController animation_controller;
+    public GameObject movement_curve;
 
     public string fire_pattern_type;
     List<float> times = new List<float>();
@@ -56,7 +56,7 @@ public class Enemy_base : MonoBehaviour {
             fire_speed = BehaviourSets[0].fire_speed;
             start_time = BehaviourSets[0].start_time;
             health = BehaviourSets[0].health;
-            animation_controller = BehaviourSets[0].animation_controller;
+            movement_curve = BehaviourSets[0].movement_curve;
             fire_pattern_type = BehaviourSets[0].fire_pattern_type;
 
             times.RemoveAt(0);
@@ -74,7 +74,7 @@ public class Enemy_base : MonoBehaviour {
         collider_size = collidersize;
     }
 
-    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, int health, AnimatorController animationcontroller, string _fire_pattern_type)
+    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, int health, GameObject _movement_curve, string _fire_pattern_type)
     {
         Enemy_Information_Instance behaviour_set_instance;
         behaviour_set_instance.move_speed = movespeed;
@@ -82,7 +82,7 @@ public class Enemy_base : MonoBehaviour {
         behaviour_set_instance.fire_speed = firespeed;
         behaviour_set_instance.start_time = starttime;
         behaviour_set_instance.health = health;
-        behaviour_set_instance.animation_controller = animationcontroller;
+        behaviour_set_instance.movement_curve = _movement_curve;
         behaviour_set_instance.fire_pattern_type = _fire_pattern_type;
 
         BehaviourSets.Add(behaviour_set_instance);
