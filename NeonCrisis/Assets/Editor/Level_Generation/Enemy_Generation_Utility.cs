@@ -8,11 +8,9 @@ public struct Enemy_Information_Section
 {   
     public float move_speed, fire_rate, fire_speed, start_time;
     public int health;
-    public AnimatorController animation_controller;
+    public GameObject movement_curve;
     public string fire_pattern_type;
     public int choice_index;
-    public GameObject bullet_type; // Added by michael - check if right
-    public Base_Fire_Pattern fire_pattern; // Added by michael - check if right
 }
 
 public class Enemy_Generation_Utility : EditorWindow {
@@ -25,6 +23,12 @@ public class Enemy_Generation_Utility : EditorWindow {
     int choice_index = 0;
     int amount_of_sections;
     Vector2 scroll_position;
+
+    //object picker
+    string enemy_search_string = "_eshp";
+    string enemy_curve_string = "";
+    int sprite_picker_id = 1;
+    int curve_picker_id = 2;
 
 
     private void OnGUI()
@@ -47,7 +51,23 @@ public class Enemy_Generation_Utility : EditorWindow {
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
         enemy_name = EditorGUILayout.TextField("Enemy Name", enemy_name);
-        enemy_sprite = (Sprite)EditorGUILayout.ObjectField("Enemy Sprite", enemy_sprite, typeof(Sprite), allowSceneObjects: false);
+
+        //enemy sprite selection start
+        if(enemy_sprite != null)
+        {
+            enemy_sprite = (Sprite)EditorGUILayout.ObjectField("Enemy Sprite", enemy_sprite, typeof(Sprite), allowSceneObjects: false);
+        }
+        if(GUILayout.Button("Select Enemy Sprite"))
+        {
+            EditorGUIUtility.ShowObjectPicker<Sprite>((Sprite)enemy_sprite, false, enemy_search_string, sprite_picker_id);
+        }
+
+        if(Event.current.commandName == "ObjectSelectorUpdated" && EditorGUIUtility.GetObjectPickerControlID() == sprite_picker_id)
+        {
+            enemy_sprite = (Sprite)EditorGUIUtility.GetObjectPickerObject();
+        }
+
+        //enemy sprite selection end
         collider_size = EditorGUILayout.FloatField("Collider Size", collider_size);
 
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
@@ -68,7 +88,20 @@ public class Enemy_Generation_Utility : EditorWindow {
                 enemy_sections[i].move_speed = EditorGUILayout.FloatField("Move Speed", enemy_sections[i].move_speed);
                 enemy_sections[i].fire_rate = EditorGUILayout.FloatField("Fire Rate", enemy_sections[i].fire_rate);
                 enemy_sections[i].fire_speed = EditorGUILayout.FloatField("Fire Speed", enemy_sections[i].fire_speed);
-                enemy_sections[i].animation_controller = (AnimatorController)EditorGUILayout.ObjectField("Enemy Animation Controller", enemy_sections[i].animation_controller, typeof(AnimatorController), allowSceneObjects: false);
+
+                if(GUILayout.Button("Select Enemy Movement Curve"))
+                {
+                    EditorGUIUtility.ShowObjectPicker<GameObject>(null, false, enemy_curve_string, curve_picker_id);
+                }
+                if (Event.current.commandName == "ObjectSelectorUpdated" && EditorGUIUtility.GetObjectPickerControlID() == curve_picker_id)
+                {
+                    enemy_sections[i].movement_curve = (GameObject)EditorGUIUtility.GetObjectPickerObject() as GameObject;
+                }
+                if (enemy_sections[i].movement_curve != null)
+                {
+                    enemy_sections[i].movement_curve = (GameObject)EditorGUILayout.ObjectField("Enemy Movement Curve", enemy_sections[i].movement_curve, typeof(GameObject), allowSceneObjects: false);
+                }
+
                 enemy_sections[i].health = EditorGUILayout.IntField("Health", enemy_sections[i].health);
                 enemy_sections[i].choice_index = EditorGUILayout.Popup(enemy_sections[i].choice_index, fire_types);
                 enemy_sections[i].fire_pattern_type = fire_types[choice_index];

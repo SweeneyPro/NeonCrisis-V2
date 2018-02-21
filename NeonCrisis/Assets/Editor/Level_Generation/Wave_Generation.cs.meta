@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:NeonCrisis/Assets/Editor/Level_Generation/Enemy_Generation_Utility.cs.meta
+<<<<<<< HEAD
+guid: 07847b6f382981f4e9d76b4ca29ce53f
+timeCreated: 1519119892
+=======
+guid: 37ca29d75bf4abb4cbaecd10311999d4
+timeCreated: 1519118859
+>>>>>>> 24f8f328c6a618a98ef3e83e9b6c9063b3943f22
+=======
+guid: d22148ad9344e5b4387488a2e7679f4c
+timeCreated: 1519127721
+>>>>>>> fb9f2253db87d6bb3671f54e123c94b5834048b2:NeonCrisis/Assets/Editor/Level_Generation/Wave_Generation.cs.meta
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
