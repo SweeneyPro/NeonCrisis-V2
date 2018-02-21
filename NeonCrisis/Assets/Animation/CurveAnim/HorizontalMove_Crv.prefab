@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4941025455821072}
   - component: {fileID: 114599011750160246}
   m_Layer: 0
-  m_Name: HorizontalMove
+  m_Name: HorizontalMove_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

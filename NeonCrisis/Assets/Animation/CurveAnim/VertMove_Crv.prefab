@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4559385952730382}
   - component: {fileID: 114906627247282038}
   m_Layer: 0
-  m_Name: VertMove
+  m_Name: VertMove_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

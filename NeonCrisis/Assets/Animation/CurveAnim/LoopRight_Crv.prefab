@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4600587926407740}
   - component: {fileID: 114210516902266116}
   m_Layer: 0
-  m_Name: LoopRight
+  m_Name: LoopRight_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

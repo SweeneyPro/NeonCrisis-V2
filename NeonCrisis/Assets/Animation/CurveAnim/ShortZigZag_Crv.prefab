@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4822769294467052}
   - component: {fileID: 114337947619180174}
   m_Layer: 0
-  m_Name: ShortZigZag
+  m_Name: ShortZigZag_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

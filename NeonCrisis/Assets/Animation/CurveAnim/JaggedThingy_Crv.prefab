@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4882769300190776}
   - component: {fileID: 114670332069023608}
   m_Layer: 0
-  m_Name: JaggedThingy
+  m_Name: JaggedThingy_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4781863291564000}
   - component: {fileID: 114018460219500502}
   m_Layer: 0
-  m_Name: LongZigZag
+  m_Name: LongZigZag_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4950272455992482}
   - component: {fileID: 114781339535892898}
   m_Layer: 0
-  m_Name: UThingy
+  m_Name: UThingy_Crv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
