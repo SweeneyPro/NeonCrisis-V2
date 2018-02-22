@@ -8,12 +8,14 @@
 	// how much of this texture is blended with the resulting input
 		_MainTexStrength("Texture Blend Strength", Float) = 0.3
 	// fractal layer one
+		_ColorTintLayer1 ("Layer1Color", Color) = (0, 0, 0, 1)    // (R, G, B, A)
 		_FractalLayer1TimeScale ("Frac L1 Timescale", Float) = 0.0
 		_FractalLayer1ScaleFloat("Frac L1 Scale", Float) = 0.0
 		_FractalLayer1Strength("Frac L1 Strength", Float) = 1.0
 		_FractalLayer1OffsetXFloat("Frac L1 Offset X", Float) = 0.0
 		_FractalLayer1OffsetYFloat("Frac L1 Offset Y", Float) = 0.0
 	// fractal layer two
+		_ColorTintLayer2 ("Layer2Color", Color) = (0, 0, 0, 1)    // (R, G, B, A)
 		_FractalLayer2TimeScale("Frac L2 Timescale", Float) = 0.0
 		_FractalLayer2ScaleFloat("Frac L2 Scale", Float) = 0.0
 		_FractalLayer2Strength("Frac L2 Strength", Float) = 1.0
@@ -21,6 +23,7 @@
 		_FractalLayer2OffsetYFloat("Frac L2 Offset Y", Float) = 0.0
 
 	// starfield input
+		_StarfieldColor("StarfieldColor", Color) = (0,0,0,1)
 		_StarfieldXDirection("SF X Dir", Float) = 50.0
 		_StarfieldYDirection("SF Y Dir", Float) = 10.0
 		_StarfieldBlendStrength("Starfield Blend Strength", Float) = 0.3
@@ -58,17 +61,21 @@
 			float _MainTexStrength;
 			float4 _MainTex_ST;
 			// fractal layer one
+			half4 _ColorTintLayer1;
 			float _FractalLayer1TimeScale;
 			float _FractalLayer1ScaleFloat;
 			float _FractalLayer1OffsetXFloat;
 			float _FractalLayer1OffsetYFloat;
 			float _FractalLayer1Strength;
 			// fractal layer two
+			half4 _ColorTintLayer2;
 			float _FractalLayer2TimeScale;
 			float _FractalLayer2ScaleFloat;
 			float _FractalLayer2OffsetXFloat;
 			float _FractalLayer2OffsetYFloat;
 			float _FractalLayer2Strength;
+
+			half4 _StarfieldColor;
 			float _StarfieldXDirection;
 			float _StarfieldYDirection;
 			float _StarfieldBlendStrength;
@@ -150,7 +157,7 @@
 						b = length(p);
 						c += abs(a - b);
 						a = b;
-						starcolour += c * float4(inner, 1, 2, 0) / _StarfieldExp;
+						starcolour += c * float4(inner, inner, inner, 0) / _StarfieldExp;
 					}
 				}
 				return starcolour;
@@ -219,7 +226,9 @@
 				//return layer1col * layer2col + (texcol * _MainTexStrength);
 				// TODO: fix starfield stuff and then uncomment this line!
 				//return layer1col * layer2col * (texcol * _MainTexStrength) + starcolour;
-				return layer1col * layer2col * (starcolour * _StarfieldBlendStrength) + starcolour;
+				return (layer1col + _ColorTintLayer1) * (layer2col + _ColorTintLayer2) * (_StarfieldColor * starcolour * _StarfieldBlendStrength);
+
+				//return layer1col  * layer2col * (starcolour * _StarfieldBlendStrength) + starcolour;
 				//return (texcol * _MainTexStrength) + starcolor;
 				//return starcolour;
 			}
