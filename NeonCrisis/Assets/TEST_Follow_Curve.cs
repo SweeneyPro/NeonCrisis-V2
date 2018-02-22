@@ -11,6 +11,11 @@ public class TEST_Follow_Curve : MonoBehaviour {
     Vector3 end_point;
     float time_offset;
     float time;
+    bool running = false;
+
+    /*
+     * NEED TO INSTANTIATE CURVES SOMEWHERE AT SOME POINT!!!!!
+     */
 
     public void Add_Curve(GameObject _curve_object)
     {
@@ -18,25 +23,39 @@ public class TEST_Follow_Curve : MonoBehaviour {
         curves.Add(bezier_curve);
     }
 
+    public void Begin()
+    {
+        end_point = current_curve.GetPointAt(1);
+        //instantiate curve
+        running = true;
+    }
+
 	// Use this for initialization
 	void Start () {
-        current_curve = curves[curve_index];
-        end_point = current_curve.GetPointAt(1);
+        
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        time += Time.deltaTime;
-		if(current_curve != null)
+        if (running == true)
         {
-            Vector3 target = current_curve.GetPointAt((time - time_offset) * (speed * Time.deltaTime));
-            this.transform.position = target;
-            if(this.transform.position == end_point)
+            time += Time.deltaTime;
+            if (current_curve != null)
             {
-                curve_index++;
-                current_curve = curves[curve_index];
-                time = 0;
+                Vector3 target = current_curve.GetPointAt((time - time_offset) * (speed * Time.deltaTime));
+                this.transform.position = target;
+                if (this.transform.position == end_point)
+                {
+                    curve_index++;
+                    current_curve = curves[curve_index];
+                    time = 0;
+                }
             }
         }
 	}
+
+    void Switch_Curve()
+    {
+        //instantiate new curve and set as current
+    }
 }
