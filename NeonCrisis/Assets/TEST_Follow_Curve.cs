@@ -3,59 +3,80 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TEST_Follow_Curve : MonoBehaviour {
-    public List<GameObject> curve_objects = new List<GameObject>();
-    List<BezierCurve> curves = new List<BezierCurve>();
+
+    public List<GameObject> curve_objects;
+
+    public List<GameObject> instantiated_curves;
+    public List<BezierCurve> curves;
+
+    public BezierCurve current_curve;
+    int curve_index;
     public float speed;
-    int curve_index = 0;
-    BezierCurve current_curve;
-    Vector3 end_point;
-    float time_offset;
-    float time;
-    bool running = false;
 
-    /*
-     * NEED TO INSTANTIATE CURVES SOMEWHERE AT SOME POINT!!!!!
-     */
-
-    public void Add_Curve(GameObject _curve_object)
+    public void Set_Speed(float _speed)
     {
-        BezierCurve bezier_curve = _curve_object.GetComponent<BezierCurve>();
-        curves.Add(bezier_curve);
+        speed = _speed;
     }
+
+    void Setup()
+    {
+        Instantiate_Curves();
+        Get_Curve_Components();
+        Line_First();
+    }
+
+    public void Add_Curve(GameObject _curve_object, int _index)
+    {
+        curve_objects.Add(_curve_object);
+    }
+
+    void Instantiate_Curves()
+    {
+        for(int i = 0; i < curve_objects.Count; i++)
+        {
+            instantiated_curves.Add(Instantiate(curve_objects[i], this.transform.position, Quaternion.identity) as GameObject);
+        }
+    }
+
+    void Get_Curve_Components()
+    {
+        for(int i=  0; i < instantiated_curves.Count; i++)
+        {
+            curves.Add(instantiated_curves[i].GetComponent<BezierCurve>());
+        }
+    }
+
+    void Line_First()
+    {
+        Vector3 init_diff = curves[0].GetPointAt(0) - instantiated_curves[0].transform.position;
+        instantiated_curves[0].transform.position = instantiated_curves[0].transform.position - init_diff;
+
+        Vector3 last_end = curves[0].GetPointAt(1);
+
+        Vector3 sec_diff = curves[1].GetPointAt(0) - instantiated_curves[0].transform.position;
+        instantiated_curves[1].transform.position = last_end;
+        instantiated_curves[1].transform.position = instantiated_curves[1].transform.position;
+    }
+
 
     public void Begin()
     {
-        end_point = current_curve.GetPointAt(1);
-        //instantiate curve
-        running = true;
+        Setup();
     }
 
-	// Use this for initialization
-	void Start () {
+    private void FixedUpdate()
+    {
+        Move_Along_Curve();
+    }
+
+    void Move_Along_Curve()
+    {
         
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        if (running == true)
-        {
-            time += Time.deltaTime;
-            if (current_curve != null)
-            {
-                Vector3 target = current_curve.GetPointAt((time - time_offset) * (speed * Time.deltaTime));
-                this.transform.position = target;
-                if (this.transform.position == end_point)
-                {
-                    curve_index++;
-                    current_curve = curves[curve_index];
-                    time = 0;
-                }
-            }
-        }
-	}
+    }
 
     void Switch_Curve()
     {
-        //instantiate new curve and set as current
+
     }
+
 }

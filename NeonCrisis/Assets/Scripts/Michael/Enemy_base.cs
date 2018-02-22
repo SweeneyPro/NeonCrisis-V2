@@ -37,7 +37,7 @@ public class Enemy_base : MonoBehaviour {
         curve_holder = GetComponent<TEST_Follow_Curve>();
         for(int i = 0; i < BehaviourSets.Count; i++)
         {
-            curve_holder.Add_Curve(BehaviourSets[i].movement_curve);
+            curve_holder.Add_Curve(BehaviourSets[i].movement_curve, i);
         }
         curve_holder.Begin();
 	}
