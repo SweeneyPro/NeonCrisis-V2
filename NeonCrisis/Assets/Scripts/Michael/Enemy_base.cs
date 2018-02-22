@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
+using System;
 public class Enemy_base : MonoBehaviour {
 
+    [System.Serializable]
     public struct Enemy_Information_Instance
     {
         public float move_speed, fire_rate, fire_speed, start_time;
-        public int health;
-        public AnimatorController animation_controller;
+        public GameObject movement_curve;
         public string fire_pattern_type;
         
     }
@@ -19,13 +20,14 @@ public class Enemy_base : MonoBehaviour {
 
     public float move_speed, fire_rate, fire_speed, start_time;
     public int health;
-    public AnimatorController animation_controller;
+    public GameObject movement_curve;
 
     public string fire_pattern_type;
     List<float> times = new List<float>();
     int curent_time_index = 0; // dont need to record index if we removing elements anyway right?
 
     float timer = 0;
+    
     public List<Enemy_Information_Instance> BehaviourSets = new List<Enemy_Information_Instance>();
 
     // Use this for initialization
@@ -47,42 +49,39 @@ public class Enemy_base : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
-        if(timer > times[0])
-        {
-            timer = 0;
-            
+        if(timer >= times[0])
+        {            
             move_speed = BehaviourSets[0].move_speed;
             fire_rate = BehaviourSets[0].fire_rate;
             fire_speed = BehaviourSets[0].fire_speed;
             start_time = BehaviourSets[0].start_time;
-            health = BehaviourSets[0].health;
-            animation_controller = BehaviourSets[0].animation_controller;
+            movement_curve = BehaviourSets[0].movement_curve;
             fire_pattern_type = BehaviourSets[0].fire_pattern_type;
-
-            times.RemoveAt(0);
-            BehaviourSets.RemoveAt(0);
         }
         //assign from current_time_index
     }
 
-    
+    void Set_Values()
+    {
 
-    public void Enemy_Constructor(string enemyname, Sprite enemySprite, float collidersize)
+    }
+
+    public void Enemy_Constructor(string enemyname, Sprite enemySprite, float collidersize, int _health)
     {
         enemy_name = enemyname;
         enemy_sprite = enemySprite;
         collider_size = collidersize;
+        health = _health;
     }
 
-    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, int health, AnimatorController animationcontroller, string _fire_pattern_type)
+    public virtual void EnemyBehaviourConstructor(float movespeed, float firerate, float firespeed, float starttime, GameObject _movement_curve, string _fire_pattern_type)
     {
         Enemy_Information_Instance behaviour_set_instance;
         behaviour_set_instance.move_speed = movespeed;
         behaviour_set_instance.fire_rate = firerate;
         behaviour_set_instance.fire_speed = firespeed;
         behaviour_set_instance.start_time = starttime;
-        behaviour_set_instance.health = health;
-        behaviour_set_instance.animation_controller = animationcontroller;
+        behaviour_set_instance.movement_curve = _movement_curve;
         behaviour_set_instance.fire_pattern_type = _fire_pattern_type;
 
         BehaviourSets.Add(behaviour_set_instance);
