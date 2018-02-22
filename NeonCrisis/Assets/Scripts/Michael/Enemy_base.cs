@@ -26,13 +26,20 @@ public class Enemy_base : MonoBehaviour {
     List<float> times = new List<float>();
     int curent_time_index = 0; // dont need to record index if we removing elements anyway right?
 
+    TEST_Follow_Curve curve_holder;
+
     float timer = 0;
     
     public List<Enemy_Information_Instance> BehaviourSets = new List<Enemy_Information_Instance>();
 
     // Use this for initialization
-    void Start () {
-		
+    void Awake() {
+        curve_holder = GetComponent<TEST_Follow_Curve>();
+        for(int i = 0; i < BehaviourSets.Count; i++)
+        {
+            curve_holder.Add_Curve(BehaviourSets[i].movement_curve, i);
+        }
+        curve_holder.Begin();
 	}
 	
 	// Update is called once per frame
@@ -47,8 +54,7 @@ public class Enemy_base : MonoBehaviour {
 
     void Assign_Local_Variables()
     {
-        timer += Time.deltaTime;
-
+        /*timer += Time.deltaTime;
         if(timer >= times[0])
         {            
             move_speed = BehaviourSets[0].move_speed;
@@ -57,7 +63,7 @@ public class Enemy_base : MonoBehaviour {
             start_time = BehaviourSets[0].start_time;
             movement_curve = BehaviourSets[0].movement_curve;
             fire_pattern_type = BehaviourSets[0].fire_pattern_type;
-        }
+        }*/
         //assign from current_time_index
     }
 
