@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: 5f1752f5f59cc1a45b76b307c37731b1
 timeCreated: 1519218081
+=======
+guid: 0043cc307491ef1498292800c0098c61
+>>>>>>> f17be6169db54c73942104b2ead781dc835977f9
 =======
 <<<<<<< HEAD
 guid: 3644d2239f59fd949a6790d4a4539617
@@ -17,6 +21,7 @@ timeCreated: 1519118859
 >>>>>>> 1b59ecbaa94f8175b68cd3b7ffc4078d0b415d6e
 >>>>>>> 1d7ecd72e96427601cbb4bbe962c7e9143df0a41
 licenseType: Free
+>>>>>>> 1d7ecd72e96427601cbb4bbe962c7e9143df0a41
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
