@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c105c103c9cf1874dad47ab244a29752
-timeCreated: 1519132438
+timeCreated: 1519297783
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: LaserAttemptreversed_3
     21300008: LaserAttemptreversed_4
     21300010: LaserAttemptreversed_5
+    21300012: LaserAttemptreversed_6
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -101,11 +102,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 26
-        y: 1051
+        y: 1042
         width: 367
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -114,12 +115,12 @@ TextureImporter:
       name: LaserAttemptreversed_1
       rect:
         serializedVersion: 2
-        x: 446
-        y: 1054
+        x: 448
+        y: 1043
         width: 275
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +129,12 @@ TextureImporter:
       name: LaserAttemptreversed_2
       rect:
         serializedVersion: 2
-        x: 792
-        y: 1054
+        x: 794
+        y: 1045
         width: 228
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +143,12 @@ TextureImporter:
       name: LaserAttemptreversed_3
       rect:
         serializedVersion: 2
-        x: 18
-        y: 609
+        x: 20
+        y: 596
         width: 156
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,12 +157,12 @@ TextureImporter:
       name: LaserAttemptreversed_4
       rect:
         serializedVersion: 2
-        x: 323
-        y: 609
+        x: 327
+        y: 596
         width: 146
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 661
-        y: 610
+        y: 594
         width: 112
-        height: 284
+        height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
