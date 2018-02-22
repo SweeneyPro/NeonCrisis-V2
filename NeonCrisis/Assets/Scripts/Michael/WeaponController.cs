@@ -23,8 +23,9 @@ public class WeaponController : MonoBehaviour {
     public float FireRate;
     private float Timer;
 
-	// Use this for initialization
-	void Start () {
+    private GameObject LaserTemp;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -43,8 +44,12 @@ public class WeaponController : MonoBehaviour {
         }
         else if(CurrentWeapon == Weapon_Modes.Laser)
         {
+            if (LaserTemp == null)
+            {
+            LaserTemp = Instantiate(Laser, transform.GetChild(0).transform.position, Quaternion.identity);
+            LaserTemp.transform.parent = transform.GetChild(0);
 
-            Instantiate(Laser, transform.GetChild(0).transform.position, Quaternion.identity);
+            }
         }
 
 

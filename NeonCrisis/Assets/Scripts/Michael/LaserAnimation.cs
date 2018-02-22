@@ -14,19 +14,19 @@ public class LaserAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*
-        if(Input.GetKeyDown("p"))
+        
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("L_L"))
         {
-            anim.SetBool("Active", true);
-            anim.speed = 1;
-            Debug.Log("Active");
+            Destroy(gameObject);
+            
         }
-        else if(Input.GetKeyUp("p"))
-        {
-            anim.SetBool("Active", false);
-            anim.speed = 1;
-            Debug.Log("Deactive");
-        }
-		*/
+
 	}
+
+    public void DestroyLaser()
+    {
+        Destroy(gameObject);
+    }
 }
+
+//Michael Is A Cuck

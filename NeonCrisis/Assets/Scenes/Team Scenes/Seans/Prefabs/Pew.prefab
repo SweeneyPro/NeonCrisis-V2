@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 50823352468474358}
   - component: {fileID: 70820781026538110}
   - component: {fileID: 114851108826029386}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pew
   m_TagString: Pew
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.29, y: 0.19}
+  m_Size: {x: 0.1, y: 0.1}
   m_Direction: 0
 --- !u!95 &95735104206873116
 Animator:
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageAmount: 1
+  DestroyOnImpact: 1
 --- !u!212 &212308076733759426
 SpriteRenderer:
   m_ObjectHideFlags: 1

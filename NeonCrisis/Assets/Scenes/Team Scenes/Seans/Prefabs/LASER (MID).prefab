@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 95392212893935356}
   - component: {fileID: 114385071537304852}
   - component: {fileID: 114388868226223596}
+  - component: {fileID: 114159501237716834}
+  - component: {fileID: 61762302654254722}
   m_Layer: 0
   m_Name: LASER (MID)
   m_TagString: Untagged
@@ -37,12 +39,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1524625772940436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.75, y: 2.42, z: 0}
+  m_LocalPosition: {x: -15.67, y: 2.42, z: 0}
   m_LocalScale: {x: 0.5, y: 3.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61762302654254722
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524625772940436}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 3}
+    newSize: {x: 1.2, y: 2.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.56, y: 2.78}
+  m_EdgeRadius: 0
 --- !u!95 &95392212893935356
 Animator:
   serializedVersion: 3
@@ -60,6 +87,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114159501237716834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524625772940436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239a28d3a2047134d996dcb7604e0771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 1
+  DestroyOnImpact: 0
 --- !u!114 &114385071537304852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825c8a649b80e2b498aed06ae9fbedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 95392212893935356}
 --- !u!212 &212727477690480262
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -97,7 +137,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2aa49576e86e6b7479acad6f5226ee94, type: 2}
+  - {fileID: 2100000, guid: 352a5055f1b9539448bc2030f45e9463, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

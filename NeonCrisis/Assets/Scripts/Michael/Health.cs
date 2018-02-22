@@ -6,10 +6,15 @@ public class Health : MonoBehaviour {
 
     Enemy_base EnemyBase;
 
+    private void Start()
+    {
+        EnemyBase = GetComponent<Enemy_base>();
+    }
 
     public void DealDamage(int damage)
     {
         EnemyBase.health -= damage;
+        CheckHealth();
     }
 
     private void CheckHealth()

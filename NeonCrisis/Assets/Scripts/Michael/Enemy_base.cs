@@ -49,7 +49,7 @@ public class Enemy_base : MonoBehaviour {
     {
         timer += Time.deltaTime;
 
-        if(timer >= times[0])
+        if(timer >= BehaviourSets[0].start_time)
         {            
             move_speed = BehaviourSets[0].move_speed;
             fire_rate = BehaviourSets[0].fire_rate;
