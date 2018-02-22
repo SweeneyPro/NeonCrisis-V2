@@ -1,7 +1,19 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6a023a557b865ce449a3fbbe53778a20
 NativeFormatImporter:
   mainObjectFileID: 0
+=======
+<<<<<<< HEAD:NeonCrisis/Assets/Scenes/Team Scenes/Jamie/Animation/Enemy Scanner.controller.meta
+guid: a7d7a6711a7b01f4592a81419083bc4a
+timeCreated: 1519149172
+licenseType: Free
+=======
+guid: 1cd0791d9fbc62f4387e4f0290bdd06a
+>>>>>>> e9d1f82028a28095df67154e89f98cee6cfcd1dd:NeonCrisis/Assets/Scenes/Team Scenes/Jamie/Animation/Enemy Scanner.controller.meta
+NativeFormatImporter:
+  mainObjectFileID: 9100000
+>>>>>>> 0b9dd0b5515bf5479d6aa4d05499a24fb7e8d656
   userData: 
   assetBundleName: 
   assetBundleVariant: 
