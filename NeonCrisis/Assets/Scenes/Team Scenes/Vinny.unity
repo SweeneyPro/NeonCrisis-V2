@@ -417,7 +417,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 945680a43414cb140bc461f1b49c4d9e, type: 2}
+  - {fileID: 2100000, guid: 55e4315bd4ad0264e8599378e1e7c446, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
