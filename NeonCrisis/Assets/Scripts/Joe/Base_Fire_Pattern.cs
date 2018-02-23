@@ -16,14 +16,6 @@ public class Base_Fire_Pattern : MonoBehaviour {
     /*
      * NEEDS TO BE UPDATED TO USE MULTIPLE STATES LIKE CURVE_MOVEMENT
      */
-
-    public void Setup(float _fire_speed, float _bullet_speed, string _fire_type)
-    {
-        fire_speed = _fire_speed;
-        bullet_speed = _bullet_speed;
-        fire_pattern_type = _fire_type;
-    }
-
     private void Update()
     {
         if(Time.fixedTime > next_fire_time)
