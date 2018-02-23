@@ -169,7 +169,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
 --- !u!4 &141107823
 <<<<<<< HEAD
-<<<<<<< HEAD
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -775,8 +774,6 @@ SpriteRenderer:
 --- !u!4 &500323484
 =======
 >>>>>>> parent of 392f819... ConorGSDGSG
-=======
->>>>>>> parent of 392f819... ConorGSDGSG
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1280,11 +1277,7 @@ Prefab:
     - target: {fileID: 400000, guid: fc08ebb20721a8140ae9cae734860d6c, type: 2}
       propertyPath: m_RootOrder
 <<<<<<< HEAD
-<<<<<<< HEAD
       value: 9
-=======
-      value: 6
->>>>>>> parent of 392f819... ConorGSDGSG
 =======
       value: 6
 >>>>>>> parent of 392f819... ConorGSDGSG
@@ -1292,7 +1285,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc08ebb20721a8140ae9cae734860d6c, type: 2}
   m_IsPrefabParent: 0
-<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &892651189
 GameObject:
@@ -1365,8 +1357,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of 392f819... ConorGSDGSG
 =======
 >>>>>>> parent of 392f819... ConorGSDGSG
 --- !u!1 &1148584956
@@ -1467,11 +1457,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
   m_RootOrder: 14
-=======
-  m_RootOrder: 11
->>>>>>> parent of 392f819... ConorGSDGSG
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1234090352
 Prefab:
@@ -2168,7 +2154,6 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 9bb7f851a530b55408e6d3bf0d3955aa, type: 2}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1 &2037470732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,7 +2359,5 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 468863865}
 >>>>>>> cedb83e95b9bc3a6d6cd83ef90ebcb3ec6fe2bf7
-=======
->>>>>>> parent of 392f819... ConorGSDGSG
 =======
 >>>>>>> parent of 392f819... ConorGSDGSG
