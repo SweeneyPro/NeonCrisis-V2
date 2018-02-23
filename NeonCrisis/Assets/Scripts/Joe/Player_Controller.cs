@@ -5,24 +5,16 @@ using UnityEngine;
 public class Player_Controller : MonoBehaviour {
 
     public float move_speed;
+    public Transform shot_position;
     Rigidbody2D rigidbody;
-    public Transform shoot_position;
-    public GameObject bullet_object;
+    public GameObject bullet;
     public float shot_delay;
     float next_shot_time;
-
-	public int BulletPoolCount;
-	private List<GameObject> bullets = new List<GameObject> ();
-
 
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
 
-		for (int i = 0; i < BulletPoolCount; i++) {
-			bullets.Add (Instantiate (bullet_object, Vector3.one, Quaternion.identity));
-
-		}
 	}
 	
 	// Update is called once per frame
@@ -40,16 +32,19 @@ public class Player_Controller : MonoBehaviour {
         {
             Fire();
         }
+
     }
 
     void Fire()
     {
-        if (Time.fixedTime >= next_shot_time)
+        if(bullet != null && shot_position != null && (Time.fixedTime > next_shot_time))
         {
-            Instantiate(bullet_object, shoot_position.position, Quaternion.identity);
+            //do firing
+            Instantiate(bullet, shot_position.position, this.transform.rotation);
             next_shot_time = Time.fixedTime + shot_delay;
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class destroyonhit : MonoBehaviour {
 
+    public GameObject explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -12,10 +13,16 @@ public class destroyonhit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnCollisionEnter2D (Collision2D col) {
-
 		if (col.gameObject.tag == "Enemy") {
 
-			Destroy(gameObject);}
+            if (explosion != null)
+            {
+                GameObject explosion_inst = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
+                Destroy(explosion_inst, 4);
+
+            }
+            Destroy(gameObject);
+        }
 
 	}
 }
