@@ -95,6 +95,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 1, b: 1, a: 0.5}
+<<<<<<< HEAD:NeonCrisis/Assets/Scenes/Team Scenes/Seans/Materials/E.G_MATBACKGROUND.mat
 <<<<<<< HEAD:NeonCrisis/Assets/Scenes/Team Scenes/Seans/E.G_MATBACKGROUND.mat
     - _MKGlowTexColor: {r: 1, g: 0.5, b: 0.5015445, a: 0}
 =======
@@ -104,5 +105,8 @@ Material:
     - _MKGlowTexColor: {r: 0.66870594, g: 0.5, b: 1, a: 0}
 >>>>>>> 1d7ecd72e96427601cbb4bbe962c7e9143df0a41
 >>>>>>> cedb83e95b9bc3a6d6cd83ef90ebcb3ec6fe2bf7:NeonCrisis/Assets/Scenes/Team Scenes/Seans/Materials/E.G_MATBACKGROUND.mat
+=======
+    - _MKGlowTexColor: {r: 0.7484944, g: 0.5, b: 0.7515056, a: 0}
+>>>>>>> parent of 392f819... ConorGSDGSG:NeonCrisis/Assets/Scenes/Team Scenes/Seans/E.G_MATBACKGROUND.mat
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

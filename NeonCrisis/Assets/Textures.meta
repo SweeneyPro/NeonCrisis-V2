@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:NeonCrisis/Assets/Editor/Level_Generation.meta
 <<<<<<< HEAD
 guid: d2359218d04ecc142b305cccd94bdf03
 folderAsset: yes
@@ -31,6 +32,12 @@ licenseType: Free
 >>>>>>> 1b59ecbaa94f8175b68cd3b7ffc4078d0b415d6e
 >>>>>>> 1d7ecd72e96427601cbb4bbe962c7e9143df0a41
 >>>>>>> cedb83e95b9bc3a6d6cd83ef90ebcb3ec6fe2bf7
+=======
+guid: 47ffd8e23d4a2de4a81d88b2d2944a83
+folderAsset: yes
+timeCreated: 1500488703
+licenseType: Pro
+>>>>>>> parent of 392f819... ConorGSDGSG:NeonCrisis/Assets/Textures.meta
 DefaultImporter:
   userData: 
   assetBundleName: 
