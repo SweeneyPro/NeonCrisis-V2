@@ -19,6 +19,7 @@ public class Enemy_Generation : MonoBehaviour{
         enemy_object.layer = LayerMask.NameToLayer("Enemy");
 
         TEST_Follow_Curve curve_component = enemy_object.AddComponent<TEST_Follow_Curve>();
+        Base_Fire_Pattern fire_pattern_component = enemy_object.AddComponent<Base_Fire_Pattern>();
 
 
         Enemy_base enemy_base = enemy_object.AddComponent<Enemy_base>();

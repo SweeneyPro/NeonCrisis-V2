@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class TEST_Follow_Curve : MonoBehaviour {
 
-    public List<GameObject> curve_objects;
+    List<GameObject> curve_objects = new List<GameObject>();
 
-    public List<GameObject> instantiated_curves;
-    public List<BezierCurve> curves;
+    List<GameObject> instantiated_curves = new List<GameObject>();
+    List<BezierCurve> curves = new List<BezierCurve>();
+    List<Vector3> end_positions = new List<Vector3>();
 
     public BezierCurve current_curve;
-    int curve_index;
+
+    int curve_index = 0;
+
     public float speed;
+    float time = 0;
+
+    void Start()
+    {
+        this.transform.Rotate(0, 0, 180);
+    }
 
     public void Set_Speed(float _speed)
     {
@@ -22,7 +31,9 @@ public class TEST_Follow_Curve : MonoBehaviour {
     {
         Instantiate_Curves();
         Get_Curve_Components();
-        Line_First();
+        Get_End_Points();
+        Line_Up();
+        current_curve = curves[curve_index];
     }
 
     public void Add_Curve(GameObject _curve_object, int _index)
@@ -45,17 +56,23 @@ public class TEST_Follow_Curve : MonoBehaviour {
             curves.Add(instantiated_curves[i].GetComponent<BezierCurve>());
         }
     }
-
-    void Line_First()
+    
+    void Get_End_Points()
     {
-        Vector3 init_diff = curves[0].GetPointAt(0) - instantiated_curves[0].transform.position;
-        instantiated_curves[0].transform.position = instantiated_curves[0].transform.position - init_diff;
+        for(int i = 0; i < curves.Count; i++)
+        {
+            Vector3 position = curves[i].GetAnchorPoints()[curves[i].pointCount - 1].position; //get the last point position of the previous curve
+            end_positions.Add(position);
+        }
+    }
 
-        Vector3 last_end = curves[0].GetPointAt(1);
-
-        Vector3 sec_diff = curves[1].GetPointAt(0) - instantiated_curves[0].transform.position;
-        instantiated_curves[1].transform.position = last_end;
-        instantiated_curves[1].transform.position = instantiated_curves[1].transform.position;
+    void Line_Up()
+    {
+        instantiated_curves[0].transform.position = this.transform.position;
+        for(int i = 1; i < curves.Count; i++)
+        {
+            curves[i].transform.position = end_positions[i - 1];
+        }
     }
 
 
@@ -64,19 +81,61 @@ public class TEST_Follow_Curve : MonoBehaviour {
         Setup();
     }
 
+    private void Update()
+    {
+        time += Time.deltaTime;
+    }
+
     private void FixedUpdate()
     {
         Move_Along_Curve();
+        Switch_Curve();
     }
 
     void Move_Along_Curve()
     {
-        
+        if (current_curve != null)
+        {
+            this.transform.position = current_curve.GetPointAt(time * (speed * Time.deltaTime));
+            Vector3 target = current_curve.GetPointAt(time * (speed * Time.deltaTime));
+            this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+        }
     }
 
     void Switch_Curve()
     {
+        if(this.transform.position == current_curve.GetPointAt(1))
+        {
+            if (curve_index + 1 < curves.Count || curve_index == 0)
+            {
+                time = 0;
+                curve_index++;
+                current_curve = curves[curve_index];
+            }
+            else
+            {
+                End();
+            }
+        }
+    }
 
+    void End()
+    {
+        for(int i = 0; i < instantiated_curves.Count; i++)
+        {
+            Destroy(instantiated_curves[i].gameObject);
+        }
+        Destroy(current_curve.gameObject);
+        Destroy(this.gameObject);
+    }
+
+    void OnDestroy()
+    {
+        for (int i = 0; i < instantiated_curves.Count; i++)
+        {
+            Destroy(instantiated_curves[i].gameObject);
+        }
+        Destroy(current_curve.gameObject);
     }
 
 }

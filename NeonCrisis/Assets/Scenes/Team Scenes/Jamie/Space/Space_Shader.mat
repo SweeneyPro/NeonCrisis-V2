@@ -59,21 +59,21 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FractalLayer1OffsetXFloat: 0
+    - _FractalLayer1OffsetXFloat: 0.08
     - _FractalLayer1OffsetYFloat: -0.89
     - _FractalLayer1ScaleFloat: 3.94
-    - _FractalLayer1Strength: 0.93
-    - _FractalLayer1TimeScale: 1.86
-    - _FractalLayer2OffsetXFloat: 0
-    - _FractalLayer2OffsetYFloat: -0.5
+    - _FractalLayer1Strength: 1.1
+    - _FractalLayer1TimeScale: 0.98
+    - _FractalLayer2OffsetXFloat: -0.25
+    - _FractalLayer2OffsetYFloat: -1.82
     - _FractalLayer2ScaleFloat: 0.28
-    - _FractalLayer2Strength: 1.36
+    - _FractalLayer2Strength: 3.03
     - _FractalLayer2TimeScale: 0.09
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _MainTexPanningSpeed: 1
-    - _MainTexStrength: 626
+    - _MainTexStrength: 623.68
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -81,8 +81,8 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StarfieldBlendStrength: 1.98
-    - _StarfieldExp: 5000
+    - _StarfieldBlendStrength: 0.66
+    - _StarfieldExp: 4998.2
     - _StarfieldXDirection: 50.54
     - _StarfieldYDirection: -5.9
     - _UVSec: 0
