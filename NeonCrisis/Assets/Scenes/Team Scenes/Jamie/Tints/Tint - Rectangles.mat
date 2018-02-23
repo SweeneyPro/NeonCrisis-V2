@@ -95,7 +95,11 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 0, b: 0, a: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
     - _MKGlowTexColor: {r: 1, g: 1, b: 1, a: 0}
+=======
+    - _MKGlowTexColor: {r: 1, g: 0.5, b: 0.5, a: 0}
+>>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
 =======
     - _MKGlowTexColor: {r: 1, g: 0.5, b: 0.5, a: 0}
 >>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
