@@ -61,6 +61,7 @@ Material:
     - _DstBlend: 0
     - _FractalLayer1OffsetXFloat: 0.08
     - _FractalLayer1OffsetYFloat: -0.89
+<<<<<<< HEAD
     - _FractalLayer1ScaleFloat: 2.12
     - _FractalLayer1Strength: 1.1
     - _FractalLayer1TimeScale: 1.8
@@ -69,11 +70,25 @@ Material:
     - _FractalLayer2ScaleFloat: -1.73
     - _FractalLayer2Strength: 2.66
     - _FractalLayer2TimeScale: 2.6
+=======
+    - _FractalLayer1ScaleFloat: 3.94
+    - _FractalLayer1Strength: 1.1
+    - _FractalLayer1TimeScale: 0.98
+    - _FractalLayer2OffsetXFloat: -0.25
+    - _FractalLayer2OffsetYFloat: -1.82
+    - _FractalLayer2ScaleFloat: 0.28
+    - _FractalLayer2Strength: 3.03
+    - _FractalLayer2TimeScale: 0.09
+>>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _MainTexPanningSpeed: 1
+<<<<<<< HEAD
     - _MainTexStrength: 279.6
+=======
+    - _MainTexStrength: 623.68
+>>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -81,15 +96,29 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+<<<<<<< HEAD
     - _StarfieldBlendStrength: 1.11
     - _StarfieldExp: 7882
     - _StarfieldXDirection: 50.1
     - _StarfieldYDirection: 5.5
+=======
+    - _StarfieldBlendStrength: 0.66
+    - _StarfieldExp: 4998.2
+    - _StarfieldXDirection: 50.54
+    - _StarfieldYDirection: -5.9
+>>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
     - _ColorTintLayer1: {r: 0.27205884, g: 0.06401384, b: 0.06401384, a: 1}
     - _ColorTintLayer2: {r: 0.022565918, g: 0, b: 0.03676468, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _StarfieldColor: {r: 1, g: 1, b: 1, a: 1}
+=======
+    - _ColorTintLayer1: {r: 0.60499495, g: 0.5900736, b: 0.78676474, a: 1}
+    - _ColorTintLayer2: {r: 0.3677739, g: 0.75, b: 0.33639705, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _StarfieldColor: {r: 0.74264705, g: 0.4226912, b: 0.34948096, a: 1}
+>>>>>>> f4560cef837de0d97428f6aa88ad7b1d92fb49d8
