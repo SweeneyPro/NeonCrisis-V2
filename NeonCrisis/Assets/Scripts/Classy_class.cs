@@ -36,7 +36,7 @@ public class Classy_class : MonoBehaviour {
         {
             Score_Updater.score_updater.Add_Score();
         }
-        //Destroy(this.gameObject, 2);
+        Destroy(this.gameObject, 2);
     }
 
     private void OnDestroy()

@@ -1,10 +1,14 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:NeonCrisis/Assets/Textures.meta
 <<<<<<< HEAD:NeonCrisis/Assets/Editor/Level_Generation.meta
 <<<<<<< HEAD
+=======
+>>>>>>> parent of dc979ab... Merge branch 'master' of https://github.com/SweeneyPro/NeonCrisis-V2:NeonCrisis/Assets/Editor/Level_Generation.meta
 guid: d2359218d04ecc142b305cccd94bdf03
 folderAsset: yes
 timeCreated: 1519119629
 licenseType: Free
+<<<<<<< HEAD:NeonCrisis/Assets/Textures.meta
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +42,8 @@ folderAsset: yes
 timeCreated: 1500488703
 licenseType: Pro
 >>>>>>> parent of 392f819... ConorGSDGSG:NeonCrisis/Assets/Textures.meta
+=======
+>>>>>>> parent of dc979ab... Merge branch 'master' of https://github.com/SweeneyPro/NeonCrisis-V2:NeonCrisis/Assets/Editor/Level_Generation.meta
 DefaultImporter:
   userData: 
   assetBundleName: 

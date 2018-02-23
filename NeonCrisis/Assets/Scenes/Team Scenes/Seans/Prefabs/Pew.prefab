@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 95735104206873116}
   - component: {fileID: 114022090928958398}
   - component: {fileID: 50823352468474358}
+  - component: {fileID: 114007751562756478}
   - component: {fileID: 70820781026538110}
-  - component: {fileID: 114851108826029386}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Pew
   m_TagString: Pew
   m_Icon: {fileID: 0}
@@ -75,11 +75,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1, y: 0.1}
+  m_Size: {x: 0.29, y: 0.19}
   m_Direction: 0
 --- !u!95 &95735104206873116
 Animator:
@@ -183,6 +183,17 @@ TrailRenderer:
     generateLightingData: 1
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114007751562756478
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1378175813415868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce929a2422169c14eb17203e307f14f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114022090928958398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -197,19 +208,6 @@ MonoBehaviour:
   pew: {fileID: 95735104206873116}
   move: {fileID: 50823352468474358}
   PewFired: {fileID: 212308076733759426}
---- !u!114 &114851108826029386
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378175813415868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239a28d3a2047134d996dcb7604e0771, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageAmount: 1
-  DestroyOnImpact: 1
 --- !u!212 &212308076733759426
 SpriteRenderer:
   m_ObjectHideFlags: 1

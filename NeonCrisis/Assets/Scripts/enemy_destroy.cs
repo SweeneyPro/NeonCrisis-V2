@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy_destroy : MonoBehaviour {
 
-	public GameObject explosion;
+	GameObject Explosion;
 
 	// Use this for initialization
 	void Start () {
@@ -16,12 +16,10 @@ public class enemy_destroy : MonoBehaviour {
 
 		if (col.gameObject.tag == "Pew") {
 
-            if (explosion != null)
-            {
-                GameObject explosion_inst = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
-                Destroy(explosion_inst, 4);
-            }
-            Destroy(this.gameObject);
+			Instantiate (Resources.Load ("Explosion_1"), transform.position, Quaternion.identity);
+			GameObject Explosion = Instantiate (Resources.Load ("Explosion_1"), this.transform.position, Quaternion.identity)  as GameObject;
+
+			Destroy(gameObject);
 		}
 
 

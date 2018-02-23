@@ -13,18 +13,12 @@ public class Play_pew : MonoBehaviour {
 
 		pew.GetComponent<Animator> (); 
 		pew.GetComponent<Rigidbody2D> ();
-		pew.GetComponent<SpriteRenderer> ();
-
-        move.AddForce(transform.up * thrust);
+		pew.GetComponent<SpriteRenderer> (); 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-
-
-
-        /*
 		if (Input.GetKeyDown("p")){
 			if (pew != null) {
 				print ("BLOOP");
@@ -41,7 +35,7 @@ public class Play_pew : MonoBehaviour {
 			}
 		
 
-*/
+
 		
 
 	}

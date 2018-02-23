@@ -334,10 +334,6 @@ public class BezierCurve : MonoBehaviour {
 	{
 		if(p1.handle2 != Vector3.zero)
 		{
-            if(p1.handle2 == null)
-            {
-                return Vector3.zero;
-            }
 			if(p2.handle1 != Vector3.zero) return GetCubicCurvePoint(p1.position, p1.globalHandle2, p2.globalHandle1, p2.position, t);
 			else return GetQuadraticCurvePoint(p1.position, p1.globalHandle2, p2.position, t);
 		}
