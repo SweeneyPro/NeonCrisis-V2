@@ -100,10 +100,6 @@ public class TEST_Follow_Curve : MonoBehaviour {
             Vector3 target = current_curve.GetPointAt(time * (speed * Time.deltaTime));
             this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
         }
-        if((time * speed * Time.deltaTime) >= 1)
-        {
-            End();
-        }
     }
 
     void Switch_Curve()
