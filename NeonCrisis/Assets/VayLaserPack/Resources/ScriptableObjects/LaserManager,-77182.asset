@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d9a79327f225146a01ca49c695abc1, type: 3}
+  m_Name: LaserManager,-77182
+  m_EditorClassIdentifier: 
+  t: {fileID: 0}
+  position: {x: -0.4821055, y: -3.0264204, z: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  laserMaterial: {fileID: 0}
+  Life: 0
+  MinLife: 0
+  MaxLife: 0
+  ConstantLife: 0
+  Speed: 0
+  MinSpeed: 0
+  MaxSpeed: 0
+  ConstantSpeed: 0
+  Size: 0
+  MinSize: 0
+  MaxSize: 0
+  ConstantSize: 0
+  Intensity: 0
+  Gravity: 0
+  Angle: 0
+  Radius: 0
+  Color: {r: 0, g: 0, b: 0, a: 0}
+  ParticleSize:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ColorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  SizeOverLifeTime: 0
+  ColorOverLifeTime: 0
+  EnableCollision: 0
+  GenerateLaser: 0
+  GenerateLife: 0
+  GenerateSpeed: 0
+  GenerateSize: 0
+  GenerateColor: 0
+  GenerateAngle: 0
+  GenerateRadius: 0
+  GenerateIntensity: 0
+  GenerationScale: 1
+  Dampen: 0
+  LifetimeLoss: 0
+  Bounce: 0
+  LifeSlider: 0
+  SpeedSlider: 0
+  SizeSlider: 0
+  AngleSlider: 0
+  RadiusSlider: 0
+  IntensitySlider: 0
+  OnLaserParticleCollision:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CollisionEnter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  CollidesWith:
+    serializedVersion: 2
+    m_Bits: 0
+  LifeOptionIndex: 0
+  SpeedOptionIndex: 0
+  SizeOptionIndex: 0
