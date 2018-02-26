@@ -10919,6 +10919,8 @@ MonoBehaviour:
   right_arrow: {fileID: 1444231326}
   box: {fileID: 1936286693}
   start_render: {fileID: 396076093}
+  left_arrow_renderer: {fileID: 1325874961}
+  right_arrow_renderer: {fileID: 1444231327}
   move_distanceX: 1.188
   move_distanceY: 0.42
   movespeedX: 1
@@ -10926,6 +10928,7 @@ MonoBehaviour:
   scalespeed: 1
   fadespeed: 1
   delaytime: 0.5
+  arrow_fade_speed: 0
 --- !u!4 &1900903664
 Transform:
   m_ObjectHideFlags: 0
