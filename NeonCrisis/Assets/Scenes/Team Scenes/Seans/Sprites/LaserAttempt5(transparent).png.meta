@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: c105c103c9cf1874dad47ab244a29752
-timeCreated: 1519297783
+guid: 9f6285383bf47294387731c527064a4a
+timeCreated: 1519655727
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: LaserAttemptreversed_0
-    21300002: LaserAttemptreversed_1
-    21300004: LaserAttemptreversed_2
-    21300006: LaserAttemptreversed_3
-    21300008: LaserAttemptreversed_4
-    21300010: LaserAttemptreversed_5
-    21300012: LaserAttemptreversed_6
+    21300000: LaserAttempt5(transparent)_3
+    21300002: LaserAttempt5(transparent)_2
+    21300004: LaserAttempt5(transparent)_1
+    21300006: LaserAttempt5(transparent)_0
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,55 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaserAttemptreversed_0
+      name: LaserAttempt5(transparent)_3
       rect:
         serializedVersion: 2
-        x: 26
-        y: 1042
-        width: 367
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: LaserAttemptreversed_1
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 1043
-        width: 275
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: LaserAttemptreversed_2
-      rect:
-        serializedVersion: 2
-        x: 794
-        y: 1045
-        width: 228
-        height: 300
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: LaserAttemptreversed_3
-      rect:
-        serializedVersion: 2
-        x: 20
+        x: 134
         y: 596
-        width: 156
-        height: 300
+        width: 100
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,13 +109,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LaserAttemptreversed_4
+      name: LaserAttempt5(transparent)_2
       rect:
         serializedVersion: 2
-        x: 327
-        y: 596
-        width: 146
-        height: 300
+        x: 319
+        y: 595
+        width: 142
+        height: 309
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,13 +123,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LaserAttemptreversed_5
+      name: LaserAttempt5(transparent)_1
       rect:
         serializedVersion: 2
-        x: 661
-        y: 594
-        width: 112
-        height: 300
+        x: 541
+        y: 592
+        width: 196
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LaserAttempt5(transparent)_0
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 592
+        width: 258
+        height: 315
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
