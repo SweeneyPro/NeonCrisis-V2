@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Straight_Shot : MonoBehaviour {
+public class Straight_Shot : Shot_Pattern {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public override void Shoot()
+    {
+        base.Shoot();
+        GameObject bullet_inst = Instantiate(bullet, this.transform.position, Quaternion.identity);
+        bullet_inst.transform.up = shot_point.transform.up;
+    }
 }
