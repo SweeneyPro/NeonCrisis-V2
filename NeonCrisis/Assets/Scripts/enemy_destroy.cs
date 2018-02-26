@@ -5,29 +5,34 @@ using UnityEngine;
 public class enemy_destroy : MonoBehaviour {
 
 	public GameObject explosion, pickup;
+    public int health;
 
 	// Use this for initialization
 	void Start () {
-
+        health = 2;
 
 	}
 	
 	void OnCollisionEnter2D (Collision2D col) {
 
-		if (col.gameObject.tag == "Pew") {
-
-            if (explosion != null)
-            {
-                GameObject explosion_inst = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
-                Destroy(explosion_inst, 4);
-            }
-            if(Random.Range(0, 3) == 1 && pickup != null)
+		if (col.gameObject.tag == "Pew") {            
+            if(Random.Range(0, 100) == 1 && pickup != null)
             {
                 Instantiate(pickup, this.transform.position, Quaternion.identity);
             }
-            Destroy(this.gameObject);
+            if (health <= 0)
+            {
+                if (explosion != null)
+                {
+                    GameObject explosion_inst = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;
+                    Destroy(explosion_inst, 4);
+                }
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                health--;
+            }
 		}
-
-
 	}
 }

@@ -21,7 +21,7 @@ public class destroyonhit : MonoBehaviour {
                 Destroy(explosion_inst, 4);
 
             }
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
 	}

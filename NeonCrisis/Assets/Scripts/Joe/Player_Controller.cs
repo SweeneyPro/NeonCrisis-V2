@@ -10,6 +10,7 @@ public class Player_Controller : MonoBehaviour {
     public GameObject bullet;
     public float shot_delay;
     float next_shot_time;
+    public Shield shield;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +25,29 @@ public class Player_Controller : MonoBehaviour {
 
     void Handle_User_Input()
     {
-        float hor = Input.GetAxisRaw("Horizontal");
-        float ver = Input.GetAxisRaw("Vertical");
+        float hor = Input.GetAxis("Horizontal");
+        float ver = Input.GetAxis("Vertical");
         Vector3 move = new Vector3(hor * move_speed, ver * move_speed, 0);
         rigidbody.velocity = move;
+
         if(Input.GetKey(KeyCode.Space))
         {
             Fire();
+        }
+        if(Input.GetKey(KeyCode.Z))
+        {
+            if(shield != null)
+            {
+                print("ACTIVATE");
+                shield.Activate();
+            }
+        }
+        else if(Input.GetKeyUp(KeyCode.Z))
+        {
+            if(shield != null)
+            {
+                shield.Deactivate();
+            }
         }
 
     }
@@ -58,9 +75,10 @@ public class Player_Controller : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Basic_Bullet>() != null)
+        if (collision.gameObject.GetComponent<Basic_Bullet>() != null && shield != null && shield.active == false)
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            Score_Updater.score_updater.score = 0;
         }
     }
     

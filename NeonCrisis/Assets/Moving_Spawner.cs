@@ -9,6 +9,7 @@ public class Moving_Spawner : MonoBehaviour {
     public shot_types shot_type;
     public GameObject enemy_to_spawn;
     public GameObject fire_pattern;
+    public int health;
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,6 +34,11 @@ public class Moving_Spawner : MonoBehaviour {
         GameObject fire_pattern_inst = Instantiate(fire_pattern, this.transform.position, Quaternion.identity);
         fire_pattern_inst.transform.SetParent(enemy_inst.transform);
         fire_pattern_inst.transform.localPosition = Vector3.zero;
+        enemy_destroy enemy_destruction = GetComponent<enemy_destroy>();
+        if(enemy_destruction != null)
+        {
+            enemy_destruction.health = health;
+        }
         
         Destroy(this.gameObject);
     }
