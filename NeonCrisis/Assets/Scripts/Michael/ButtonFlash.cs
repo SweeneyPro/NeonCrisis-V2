@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class ButtonFlash : MonoBehaviour {
 
+    public GameObject flash_object;
     public float flash_speed;
     Material material;
+    SpriteRenderer sprite;
     Image image;
 
 	// Use this for initialization
 	void Start () {
-        image = GetComponent<Image>();
-        material = image.material;
+        sprite = flash_object.GetComponent<SpriteRenderer>();
+        //image = GetComponent<Image>();
+        material = sprite.material;
 	}
 	
 	// Update is called once per frame
