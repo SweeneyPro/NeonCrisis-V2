@@ -16,6 +16,10 @@ public class Basic_Bullet : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "Enemy" && Score_Updater.score_updater != null)
+        {
+            Score_Updater.score_updater.Add_Score();
+        }
         Destroy(this.gameObject);
     }
 }
