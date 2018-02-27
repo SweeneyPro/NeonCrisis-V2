@@ -100,7 +100,11 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
+<<<<<<< HEAD
         intensity: 3
+=======
+        intensity: 2.25
+>>>>>>> 2d6d7f9ca300c85828b0f77093b3ca6dfe1d4e92
         threshold: 0.85
         softKnee: 0.5
         radius: 2
