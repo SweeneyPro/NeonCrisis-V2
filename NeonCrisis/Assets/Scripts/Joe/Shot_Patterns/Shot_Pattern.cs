@@ -8,9 +8,16 @@ public class Shot_Pattern : MonoBehaviour {
     public Transform shot_point;
     public float shot_delay;
     float next_shot_time;
-	
-	// Update is called once per frame
-	void Update () {
+    public AudioSource pew_source;
+
+    private void Start()
+    {
+        Destroy(this.gameObject, 15);
+        this.transform.Rotate(new Vector3(0, 0, 180));
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if(Time.fixedTime > next_shot_time && bullet != null)
         {
             Shoot();

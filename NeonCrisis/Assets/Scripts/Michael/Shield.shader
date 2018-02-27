@@ -8,7 +8,7 @@ Shader "Custom/Shield"
 		_Color("Color Tint", Color) = (0.0,1.0,0.0,1.0)
 		_Inside("Inside", Range(0.0,2.0)) = 0.0
 		_Rim("Rim", Range(0.0,1.0)) = 1.2
-		_Texture("Texture", 2D) = "white" {}
+		_MainTex("Texture", 2D) = "white" {}
 		_Speed("Speed", Range(0.5,5.0)) = 0.5
 		_Tile("Tile", Range(1.0,10.0)) = 5.0
 		_Strength("Strength", Range(0.0,5.0)) = 1.5

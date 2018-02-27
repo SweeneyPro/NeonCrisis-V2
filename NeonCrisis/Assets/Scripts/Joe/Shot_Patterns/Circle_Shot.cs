@@ -19,6 +19,7 @@ public class Circle_Shot : Shot_Pattern {
             GameObject bullet_inst = Instantiate(bullet, shot_point.transform.position, Quaternion.identity) as GameObject;
             bullet_inst.transform.up = shot_point.transform.up;//xy - (Vector2)this.transform.position;
             //yield return new WaitForSeconds(rotation_delay);
+            pew_source.Play();
         }
 
     }

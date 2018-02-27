@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Team Scenes/Jo.unity
-    guid: 8b54a63fcc6f51145b1829eb7aef6350
+    path: Assets/Scenes/Team Scenes/Level_2.unity
+    guid: ffe8e4c79c657254d9a963635e073a95

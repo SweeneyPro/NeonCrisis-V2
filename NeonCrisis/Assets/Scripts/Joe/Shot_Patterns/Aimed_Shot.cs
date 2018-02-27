@@ -17,6 +17,7 @@ public class Aimed_Shot : Shot_Pattern {
                 bullet_inst.transform.up = player_object.transform.position - shot_point.transform.position;
             }
         }
+        pew_source.Play();
     }
     
 }

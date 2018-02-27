@@ -16,7 +16,7 @@ public class enemy_destroy : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col) {
 
 		if (col.gameObject.tag == "Pew") {            
-            if(Random.Range(0, 100) == 1 && pickup != null)
+            if(Random.Range(0, 5) == 1 && pickup != null)
             {
                 Instantiate(pickup, this.transform.position, Quaternion.identity);
             }

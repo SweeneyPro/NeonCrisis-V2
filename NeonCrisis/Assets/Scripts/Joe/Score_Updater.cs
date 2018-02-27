@@ -21,6 +21,12 @@ public class Score_Updater : MonoBehaviour {
         score_text.text = score.ToString();
     }
 
+    public void Add_Score(int _amount)
+    {
+        score += _amount;
+        score_text.text = score.ToString();
+    }
+
     public void Take_Score(int _amount)
     {
         score -= _amount;
