@@ -43,9 +43,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MKGlowTex:
-        m_Texture: {fileID: 2800000, guid: 61718d5b73464b545b0b5b995783c98c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 6f905c1fc089b6b4db0d188e175c54de, type: 3}
+        m_Scale: {x: -1, y: -2}
+        m_Offset: {x: 5, y: 5}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -84,9 +84,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.46754563, b: 0.22794116, a: 1}
+    - _Color: {r: 1, g: 0.5586207, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MKGlowTexColor: {r: 0.83433515, g: 0.66566485, b: 0.66566485, a: 0}
+    - _MKGlowTexColor: {r: 1, g: 0.43448272, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

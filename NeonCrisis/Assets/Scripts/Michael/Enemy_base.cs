@@ -27,6 +27,7 @@ public class Enemy_base : MonoBehaviour {
     int curent_time_index = 0; // dont need to record index if we removing elements anyway right?
 
     TEST_Follow_Curve curve_holder;
+    Base_Fire_Pattern fire_pattern;
 
     float timer = 0;
     
@@ -40,6 +41,10 @@ public class Enemy_base : MonoBehaviour {
             curve_holder.Add_Curve(BehaviourSets[i].movement_curve, i);
         }
         curve_holder.Begin();
+        
+        //currently only uses one 
+        //fire_pattern = GetComponent<Base_Fire_Pattern>();
+        //fire_pattern.Setup(fire_rate, fire_speed, BehaviourSets[0].fire_pattern_type);
 	}
 	
 	// Update is called once per frame

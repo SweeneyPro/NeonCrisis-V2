@@ -43,7 +43,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MKGlowTex:
-        m_Texture: {fileID: 2800000, guid: 61718d5b73464b545b0b5b995783c98c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 02d98fe85ecbe4b468d38934962b2732, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -73,7 +73,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _MKGlowPower: 0.56
-    - _MKGlowTexStrength: 3.14
+    - _MKGlowTexStrength: 1.9
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -84,9 +84,9 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.3184584, g: 0.22794116, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.8529412, b: 0.63235295, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _MKGlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MKGlowTexColor: {r: 1, g: 0, b: 0, a: 1}
+    - _MKGlowTexColor: {r: 0.9371197, g: 0.5441177, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
