@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Straight_Shot : MonoBehaviour {
+public class Homing_Shot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
