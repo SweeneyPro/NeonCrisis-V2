@@ -16,10 +16,6 @@ public class Player_Controller : MonoBehaviour {
     int pickup_index;
     int shot_level = 1;
 
-    
-
-
-
 	// Use this for initialization
 	void Start () {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -42,22 +38,6 @@ public class Player_Controller : MonoBehaviour {
         {
             Fire();
         }
-        if(Input.GetKey(KeyCode.Z))
-        {
-            if(shield != null)
-            {
-                print("ACTIVATE");
-                shield.Activate();
-            }
-        }
-        else if(Input.GetKeyUp(KeyCode.Z))
-        {
-            if(shield != null)
-            {
-                shield.Deactivate();
-            }
-        }
-
     }
 
     void Fire()
@@ -112,15 +92,5 @@ public class Player_Controller : MonoBehaviour {
             }
             Destroy(pickup.gameObject);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<Basic_Bullet>() != null && shield != null && shield.active == false)
-        {
-            //Destroy(this.gameObject);
-            Score_Updater.score_updater.score = 0;
-        }
-    }
-    
+    }    
 }

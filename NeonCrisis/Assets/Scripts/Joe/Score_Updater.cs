@@ -36,4 +36,29 @@ public class Score_Updater : MonoBehaviour {
         }
         score_text.text = score.ToString();
     }
+
+    public void On_End()
+    {
+        Test_Highscore_Code();
+    }
+
+    void Test_Highscore_Code()
+    {
+        if(PlayerPrefs.HasKey("Highscore") == false)
+        {
+            PlayerPrefs.SetInt("Highscore", score);
+        }
+        else
+        {
+            if (score > PlayerPrefs.GetInt("Highscore"))
+            {
+                PlayerPrefs.SetInt("Highscore", score);
+            }
+        }
+    }
+
+    void Full_Highscore_Code()
+    {
+
+    }
 }

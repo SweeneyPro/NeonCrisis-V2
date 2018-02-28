@@ -23,10 +23,17 @@ public class destroyonhit : MonoBehaviour {
             }
 
             health -= 3;
-            print(health);
+            if(UI_Health.ui_health_instance != null)
+            {
+                UI_Health.ui_health_instance.Update_Health(health);
+            }
 
             if(health <= 0)
             {
+                if(Score_Updater.score_updater != null)
+                {
+                    Score_Updater.score_updater.On_End();
+                }
                 Destroy(this.gameObject);
             }
         }
