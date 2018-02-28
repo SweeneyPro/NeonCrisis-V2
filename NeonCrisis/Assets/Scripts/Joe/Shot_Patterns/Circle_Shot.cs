@@ -10,12 +10,16 @@ public class Circle_Shot : Shot_Pattern {
     public override void Shoot()
     {
         base.Shoot();
-        for (int i = 0; i < 360 / angle_skip; i += angle_skip)
+        float skipped = 0.0f;
+        while (skipped < 360f)
         {
-            Vector2 xy = new Vector2(shot_point.transform.position.x + radius * Mathf.Cos(i), shot_point.transform.position.y + radius * Mathf.Sin(i));
-            Vector2 direction = xy - (Vector2)this.transform.position;
-            GameObject bullet_inst = Instantiate(bullet, xy, Quaternion.identity) as GameObject;
-            bullet_inst.transform.up = direction;
+            skipped += angle_skip;
+            shot_point.transform.Rotate(new Vector3(0, 0, angle_skip));
+            //Vector2 xy = new Vector2(shot_point.transform.position.x + radius * Mathf.Cos(i), shot_point.transform.position.y + radius * Mathf.Sin(i));
+            GameObject bullet_inst = Instantiate(bullet, shot_point.transform.position, Quaternion.identity) as GameObject;
+            bullet_inst.transform.up = shot_point.transform.up;//xy - (Vector2)this.transform.position;
+            //yield return new WaitForSeconds(rotation_delay);
+            pew_source.Play();
         }
 
     }

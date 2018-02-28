@@ -17,11 +17,6 @@ public class TEST_Follow_Curve : MonoBehaviour {
     public float speed;
     float time = 0;
 
-    void Start()
-    {
-        this.transform.Rotate(0, 0, 180);
-    }
-
     public void Set_Speed(float _speed)
     {
         speed = _speed;
